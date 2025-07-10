@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body class="bg-light-blue">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 shadow-sm fixed-top animate-navbar" data-aos="fade-down">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold text-primary" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">Docs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link {% if page.url == '/cv/' %}active{% endif %}" href="{{ "/cv/" | relative_url }}">CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  {% if page.url == '/' %}
+  <section class="hero-section d-flex align-items-center justify-content-center text-center" data-aos="fade-up">
+    <div class="container py-5">
+      <h1 class="display-3 fw-bold text-primary mb-3 animate-hero">Stormwater Solutions LLc</h1>
+      <p class="lead text-secondary mb-4 animate-hero">Showcasing the work of Stormwater Solution LLC and their contributions to the New River Valley.</p>
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn-lg btn-primary shadow animate-hero" data-aos="zoom-in">View Projects</a>
+    </div>
+  </section>
+  {% endif %}
+
+  <main class="container main-content pt-5" data-aos="fade-in">
+    {{ content }}
+  </main>
+
+  <button id="backToTop" class="btn btn-primary rounded-circle shadow back-to-top" title="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <footer class="footer bg-white bg-opacity-75 text-primary text-center py-3 mt-5 animate-footer" data-aos="fade-up">
+    <div class="container">
+      &copy; 2024 {{ site.title }}. All rights not reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    };
+    backToTop.onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
