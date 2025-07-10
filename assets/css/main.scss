@@ -1,0 +1,139 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+--- 
+
+// Light blue theme variables
+$primary: #3498db;
+$secondary: #6ec6f3;
+$light-blue: #eaf6fb;
+$white: #fff;
+$dark: #222;
+
+body.bg-light-blue {
+  background: linear-gradient(135deg, $light-blue 0%, $white 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: $dark;
+  transition: background 0.5s;
+}
+
+.navbar {
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.navbar .navbar-brand {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.navbar .nav-link {
+  color: $primary !important;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: color 0.3s, background 0.3s;
+  border-radius: 0.5rem;
+}
+.navbar .nav-link.active, .navbar .nav-link:hover {
+  background: $secondary;
+  color: $white !important;
+}
+
+.hero-section {
+  background: linear-gradient(120deg, $primary 0%, $secondary 100%);
+  color: $white;
+  border-radius: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(52,152,219,0.15);
+  animation: fadeInHero 1.2s;
+}
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+.main-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInMain 1s;
+}
+@keyframes fadeInMain {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.card, .project-card {
+  background: $white;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(52,152,219,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 2rem;
+}
+.card:hover, .project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+}
+
+.footer {
+  background: $light-blue;
+  color: $primary;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 -2px 16px rgba(52,152,219,0.08);
+  font-size: 1.1rem;
+  animation: fadeInFooter 1.2s;
+}
+@keyframes fadeInFooter {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+// Back to top button
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: $primary;
+  color: $white;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.back-to-top:hover {
+  background: $secondary;
+  color: $white;
+  box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+}
+
+// Animations for AOS
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+// Responsive improvements
+@media (max-width: 991px) {
+  .navbar {
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .hero-section {
+    margin-top: 4rem;
+    border-radius: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  .main-content {
+    padding: 0 0.5rem;
+  }
+}
