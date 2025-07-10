@@ -3,15 +3,15 @@
 # only Main files contain this front matter, not partials.
 --- 
 
-// Light blue theme variables
-$primary: #3498db;
-$secondary: #6ec6f3;
-$light-blue: #eaf6fb;
-$white: #fff;
-$dark: #222;
+// Black, white, and gray theme variables
+$primary: #333333;
+$secondary: #666666;
+$light-gray: #f5f5f5;
+$white: #ffffff;
+$dark: #000000;
 
 body.bg-light-blue {
-  background: linear-gradient(135deg, $light-blue 0%, $white 100%);
+  background: linear-gradient(135deg, $light-gray 0%, $white 100%);
   min-height: 100vh;
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   color: $dark;
@@ -46,7 +46,7 @@ body.bg-light-blue {
   border-radius: 2rem;
   margin-top: 6rem;
   margin-bottom: 2rem;
-  box-shadow: 0 8px 32px rgba(52,152,219,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   animation: fadeInHero 1.2s;
 }
 @keyframes fadeInHero {
@@ -67,20 +67,20 @@ body.bg-light-blue {
 .card, .project-card {
   background: $white;
   border-radius: 1.5rem;
-  box-shadow: 0 4px 24px rgba(52,152,219,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 2rem;
 }
 .card:hover, .project-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
 .footer {
-  background: $light-blue;
+  background: $light-gray;
   color: $primary;
   border-radius: 1rem 1rem 0 0;
-  box-shadow: 0 -2px 16px rgba(52,152,219,0.08);
+  box-shadow: 0 -2px 16px rgba(0,0,0,0.08);
   font-size: 1.1rem;
   animation: fadeInFooter 1.2s;
 }
@@ -106,7 +106,7 @@ body.bg-light-blue {
 .back-to-top:hover {
   background: $secondary;
   color: $white;
-  box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 // Animations for AOS
