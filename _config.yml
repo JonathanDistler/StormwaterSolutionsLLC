@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+
+# Site Settings
+locale                   : "en-US"
+title                    : Jonathan Distler
+title_separator          : "-"
+subtitle                 : # Jonathan Distler's Projects and CV
+name                     : Jonathan Distler
+description              : Jonathan Distler - Projects and CV 
+baseurl                  : "/DistlerPortfolio" # Set this to your repo name for GitHub Pages
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+
+# Theme and Style
+theme: jekyll-theme-minimal
+color_scheme: aqua # light/default, dark, or aqua
+
+sass:
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+
+collections:
+  pages:
+    output: true
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
