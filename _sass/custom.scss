@@ -1,21 +1,21 @@
 // Default to light theme
-$primary-color: #3a3f58;
-$background-color: #f7f8fa;
-$text-color: #333;
+$primary-color: #333333;
+$background-color: #f5f5f5;
+$text-color: #333333;
 
 // Set theme colors based on the color_scheme variable
 @if $color_scheme == 'dark' {
-  $primary-color: #333;
-  $background-color: #0000ff;
-  $text-color: #fff;
+  $primary-color: #333333;
+  $background-color: #000000;
+  $text-color: #ffffff;
 } @else if $color_scheme == 'aqua' {
-  $primary-color: #598392;
-  $background-color: #eff6e0;
-  $text-color: #01161e;
+  $primary-color: #666666;
+  $background-color: #f0f0f0;
+  $text-color: #333333;
 } @else if $color_scheme == 'desert' {
-  $primary-color: #925959;
-  $background-color: #f6f1e0;
-  $text-color: #1e0101;
+  $primary-color: #666666;
+  $background-color: #f5f5f5;
+  $text-color: #333333;
 }
 
 .navbar, h1, h2, h3, h4, h5, h6 {
@@ -85,13 +85,13 @@ footer {
   overflow-x: auto;
 }
 
-.highlight .k { color: #c792ea; }
-.highlight .nb { color: #82aaff; }
-.highlight .s { color: #c3e88d; }
-.highlight .mi { color: #f78c6c; }
-.highlight .c { color: #5c6370; }
-.highlight .p { color: #89ddff; }
-.highlight .o { color: #ff5370; }
+.highlight .k { color: #cccccc; }
+.highlight .nb { color: #999999; }
+.highlight .s { color: #cccccc; }
+.highlight .mi { color: #999999; }
+.highlight .c { color: #666666; }
+.highlight .p { color: #cccccc; }
+.highlight .o { color: #999999; }
 
 .profile-image {
   float: left;
@@ -187,7 +187,7 @@ gallery-container {
 .back-arrow {
   display: inline-block;
   font-size: 1.1em;
-  color: #686d85; 
+  color: #666666; 
   text-decoration: none;
   margin-bottom: 1em;
   font-weight: bold;
@@ -195,16 +195,16 @@ gallery-container {
 }
 
 .back-arrow:hover {
-  color: #3a3f58; 
+  color: #333333; 
   transform: translateX(-4px);
 }
 
-// Custom overrides for light blue theme
-$primary: #3498db;
-$secondary: #6ec6f3;
-$light-blue: #eaf6fb;
-$white: #fff;
-$dark: #222;
+// Custom overrides for black, white, and gray theme
+$primary: #333333;
+$secondary: #666666;
+$light-gray: #f5f5f5;
+$white: #ffffff;
+$dark: #000000;
 
 // Example: Custom button style
 .btn-primary {
@@ -212,13 +212,13 @@ $dark: #222;
   border: none;
   color: $white;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(52,152,219,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   transition: background 0.3s, box-shadow 0.3s;
 }
 .btn-primary:hover, .btn-primary:focus {
   background: linear-gradient(90deg, $secondary 60%, $primary 100%);
   color: $white;
-  box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 // Custom card header
@@ -247,6 +247,6 @@ a:hover {
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(52,152,219,0.08);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
